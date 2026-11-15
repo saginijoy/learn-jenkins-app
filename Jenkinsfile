@@ -30,6 +30,8 @@ pipeline {
 
                 echo 'Building new git - test'
                 sh '''
+                npm ci
+                npm --version
                 npm test
                 test -f build/$BUILD_FILENAME
                 '''
