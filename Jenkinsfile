@@ -27,8 +27,10 @@ pipeline {
         }
         stage('test') {
             steps {
+
                 echo 'Building new git - test'
                 sh '''
+                npm test
                 test -f build/$BUILD_FILENAME
                 '''
             }
